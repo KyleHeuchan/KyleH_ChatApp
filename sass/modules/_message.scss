@@ -1,0 +1,27 @@
+.new-message { 
+    span { font-size: 0.8rem; display: block; margin-bottom: 2px; }
+
+    width: 45%;
+    padding: 8px 12px;
+    background-color: white; 
+    border-radius: 8px;
+    margin-bottom: 1rem;
+
+    float:left;
+    clear: both;
+}
+
+.my-message {
+    float: right !important;
+    background-color: #939393;
+    color: white;
+}
+
+#notifications, #disconnections {
+    width: 20%;
+    float: left;
+    text-align: center;
+    background-color: #828282;
+    box-shadow: 5px 5px black;
+    border-radius: 0;
+}

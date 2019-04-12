@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Socket IO Chat with Node! Amazing!!</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="https://unpkg.com/vue"></script> 
+</head>
+<body>
+
+	<main id="app">		
+		<section class="form-container">
+			<i id="theme" class="fas fa-cog lb"><span>Best Theme here</span></i>
+			<h1 id="title" class="lb">Welcome to my Chat Application</h1>
+			<label for="nickname" class="lb">Choose nickname here</label>
+			<input v-model="nickname" type="text" id="nickname" class="nickname" placeholder="What is your nickname?">
+			
+			<form>
+				<!-- your messages are being displayed here -->
+				<label for="message" class="lb">Your messages are here!</label>
+
+				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
+
+				<input id="submit" type="submit" @click.prevent="dispatchMessage">
+			</form>
+			<!-- typing a new message here -->
+			<p v-if="typing" class="lb">{{typing}} is typing a message</p>
+			<!-- displays current users in the chat -->
+			<p id="userConnect" class="lb">Current Users: {{ userconnect.currentusers }}</p>
+		</section>
+
+		<section class="messages">
+
+			<p id="notifications" v-for="notification in notifications" class="new-message">{{ notification }}</p>
+
+			<p id="disconnections" v-for="disconnection in disconnections" class="new-message center">{{ disconnection }}</p>	
+
+			<ul id="messages" v-for="message in messages">
+				<!-- render a new componenty for every new message -->
+				<newmessage :msg="message"></newmessage>		
+			</ul>
+		</section>		
+	</main>
+	<script src="/socket.io/socket.io.js"></script>
+	<script type="module" src="js/main_vm.js"></script>
+</body>
+</html>

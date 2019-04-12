@@ -1,0 +1,112 @@
+#theme {
+    margin-bottom: 1rem;
+}
+
+
+
+.themeChange {
+    // message box css starts from here
+
+    background: linear-gradient(45deg, #ca0000, rgb(202, 0, 0));
+
+    .new-message { 
+        span { font-size: 0.8rem; display: block; margin-bottom: 2px; }
+    
+        width: 45%;
+        padding: 8px 12px;
+        background-color: #ca0000; 
+        border-radius: 8px;
+        margin-bottom: 1rem;
+    
+        float:left;
+        clear: both;
+    }
+    
+    .my-message {
+        float: right !important;
+        background-color: #ffffff;
+        color: white;
+    }
+    
+    #notifications, #disconnections {
+        width: 20%;
+        float: left;
+        text-align: center;
+        background-color: #eee;
+        border: 2px solid black;
+        box-shadow: 5px 5px black;
+        border-radius: 0;
+    }
+    
+    
+    //message box css ends here
+    
+    //input box css starts from here
+    
+    .form-container, .messages { padding: 20px; }
+    .form-container { 
+        flex: 1; 
+        background-color: rgba(000,000,000,.2);
+        label { display: block; margin-bottom: 0.5rem; }
+    }
+
+    .lb {
+        color: white;
+    }
+
+    .fa-redo {
+        color: white;
+        margin-top: 1rem;
+    }
+
+    #redo {
+        display: block;
+    }
+    
+    .messages { 
+        flex: 2;
+        border: none; 
+    }
+    
+    input, textarea { 
+        display: block; 
+        width: 100%;
+        border: 5px solid #ffffff;
+        //border-color: #bfcfd6; 
+        font-size: 0.8rem; 
+        padding: 1rem; 
+        border-style: solid;
+        box-shadow: 5px 5px 2px #ffffff;
+    }
+    
+    #submit {
+        border: none;
+        box-shadow: none;
+    }
+    
+    textarea { height: 135px; }
+    
+    
+    
+    form {
+        //background: #000;
+        padding: 3px;
+        margin: 12px auto;
+    
+        input[type=submit] { 
+            width: auto; 
+            padding: 10px; 
+            background-color: #ffffff;
+            margin-top: 1rem; 
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+    
+    // input box css end here
+
+}
+
